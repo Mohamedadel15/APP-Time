@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <title> Timer</title>
+</head>
+
+<body>
+    <!--  the main nav bar contain logo and more links -->
+    <nav class="nav_bar">
+        <!-- this div for make the nav same back ground for the bage -->
+        <div class="container">
+            <div class="logo">
+                <h1>Time<span><img src="/images/logo.png" alt="logo image" class="logo-img" draggable="false"></span>App
+                </h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#clock" class="active-link">clock</a></li>
+                    <li><a href="#Timer">Timer</a></li>
+                    <li><a href="#Remaining-Time">Remaining Time</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--  the end of nav bar -->
+    <main>
+        <!--  section one contain the time now  -->
+        <section id="clock">
+            <div class="container-section">
+                <div class="year">
+                    <div class="current-year">
+                        <h1> 2023</h1>
+                    </div>
+                    <div>
+                        <h2>happy New year </h2>
+                    </div>
+
+                    <div>
+                        <h3>time now </h3>
+                    </div>
+                    <div class="time-now">
+                        <div class="hours">00</div>
+                        <p>:</p>
+                        <div class="minutes">00</div>
+                        <p>:</p>
+                        <div class="seconds">00</div>
+                        <div class="moment"></div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <!-- the end of section one  -->
+
+
+            <!-- section two  contain three page  -->
+        </section>
+        <section id="Timer">
+            <!-- fixed colum nav bar to show mu page detail  -->
+            <div class="nav-timer">
+
+                <!-- logo for fixed nav  -->
+
+                <div class="logo-nav-timer">
+                    <ul>
+                        <li><img src="/images/timer-nav.png" alt="timer logo" draggable="false">
+                            <p class="activehidden">timer</p>
+                        </li>
+                        <li><img src="/images/refer-btn-nav-timer.png" alt="button to view more" draggable="false">
+                            <p class="activehidden">button</p>
+                        </li>
+                        <li><img src="/images/nav-timer-appearance.png" alt="appearance logo to change the style"
+                                draggable="false">
+                            <p class="activehidden">appearance</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- the end of my fixed nav bar -->
+
+                <!-- the class time-text is contain three pages with dynamical hidden   -->
+                <div class="timer-text ">
+                    <div class="TextOfTimer">
+                        <h1>Timer</h1>
+
+
+                        <!-- start to finish timer section  -->
+
+                        <div class="strToFinish">
+                            <p>type <span class="mainSpanOfTimer">start-to-finish Timer <span
+                                        class="dropDown">▽</span></span></p>
+                        </div>
+                        <!-- div contain the menus for three pages name -->
+                        <div class="timerCard activeNone">
+                            <p class="active" id="Start_To_Finish_Timer_Section">Start-To-Finish Timer</p>
+                            <p id="Remaining_Time_Counter">Remaining Time counter per visitor</p>
+                            <p id="Start_To_Finish_number_counter">Start-To-Finish Number counter</p>
+                        </div>
+
+                        <!-- the end of the div that contain the menus for three pages name  -->
+                        
+                        <!-- the first page contact  inside the fixed nav   -->
+                        <div class="calcTime  ">
+                            <div class="srtTime">
+                                <label for="strDateInput">Start Time</label>
+                                <input type="time" id="strTimeInput" value="01:00">
+                                <input type="date" id="strDateInput" >
+                            </div>
+                            <div class="endTime">
+                                <label>End Time</label>
+                                <input type="time" id="endTimeInput" value="23:59" >
+                                <input type="date" id="endDateInput" value="2023-12-01" >
+                            </div>
+                        </div>
+
+
+
+                        <!-- the second page content div to contain the content of  Remaining Time Counter per visitor-->
+                        <div class="remainingTimeCounter activeNone ">
+                            <div class="remainingTimePeriod">
+                                <p>remaining time period</p>
+                                <input type="number" min="1" max="50" title="the minmum nember is one and the max is 50"
+                                    value="1" id="remainingNUmber">
+                            </div>
+                            <div class="setTimeIn">
+                                <label for="listTime">set the time in </label>
+                                <select id="listTime">
+                                    <option value="Days">Days</option>
+                                    <option value="Hours">Hours</option>
+                                    <option value="Minutes">Minutes</option>
+                                    <option value="Seconds">Seconds</option>
+                                </select>
+
+                            </div>
+
+                            <!-- the third page content inside fixed nav -->
+                        </div>
+                        <div class="startToFinishNumberCounter activeNone">
+                            <div class="startCount">
+                                <p>count from</p>
+                                <input type="number" min="1" max="50" title="the minmum nember is one and the max is 50"
+                                value="1" id="stRcounterNUmber">
+                            </div>
+                            <div class="EndCount">
+                                <label for="listTime">count to </label>
+                                <input type="number" min="2" max="50" title="the minmum nember is one and the max is 50"
+                                value="10" id="enDcounterNUmber">
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- the end for three pages content the input  div for content  time  -->
+                        
+                        <!-- this make to can position any div inside the section  -->
+                        <div class="position">
+                            <div class="position-ratio">
+                                <h2>position</h2>
+                                <div class="containerOfinput">
+                                    <label class="conntainer" id="radioPosition">install to required position
+                                        <input type="radio" name="radio" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="conntainer" id="radio-static">Static Top Banner
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="conntainer" id="radioFloating">Floating bottom Banner
+                                        <input type="radio" name="radio">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- the end for the position div -->
+
+                        <!-- dynamical textarea to change the hider of my diver timer -->
+                        <div class="messageBeforeTimer">
+                            <p>message before Timer</p>
+                            <textarea name="#" id="textarea" cols="30" rows="10"
+                                aria-valuetext="Count">Countdown to my dream come true</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- section one finish start to finish timer -->
+            </div>
+
+
+
+            <!-- create containers to story for all time days & minutes & seconds -->
+
+
+            <div class="textForAllTimer">
+                <div class="container-timer-section">
+                    <!-- the first page start to finish div -->
+                    <div class="container-start-to-finish-div ">
+                        <h1 class="message"></h1>
+                        <div class="alltime">
+                            <div>
+                                <h2>days</h2>
+                                <p id="allTimeDays">00</p>
+                            </div>
+                            <div>
+                                <h2>hours</h2>
+                                <p id="allTimeSecond">00</p>
+                            </div>
+                            <div>
+                                <h2>minutes</h2>
+                                <p id="allTimeMinute">00</p>
+                            </div>
+                            <div>
+                                <h2>seconds</h2>
+                                <p id="allTimeHours">00</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- the second page  remaining time -->
+                    <div class="container-ramaining-period-div activeNone">
+                        <h1 class="message"></h1>
+                        <div class="alltime altimeRemain">
+                            <div class="days">
+                                <h2>days</h2>
+                                <p id="allTimeDays1">00</p>
+                            </div>
+                            <div class="hours" >
+                                <h2>hours</h2>
+                                <p id="allTimeSecond1" >00</p>
+                            </div>
+                            <div class="minutes">
+                                <h2>minutes</h2>
+                                <p id="allTimeMinute1" >00</p>
+                            </div>
+                            <div class="seconds">
+                                <h2>seconds</h2>
+                                <p id="allTimeHours1">00</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- the third page is counter for count page -->
+                    <div class="container-count-down-div activeNone ">
+                        <h1 class="message"></h1>
+                        <div class="alltime ">
+                            <div class="counter">
+                                <h2>counter</h2>
+                                <p id="counterNumber">00</p>
+                            </div>
+                        </div>
+                        <p class="countFalse activeNone">Note: Your countdown is over, and your counter has been hidden, because it's past its end number. To display the counter once again, set a new numbers count. Also you can choose an action to be performed after the countdown is over.</p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+            <!-- -------------the finish for block of text ----------------- -->
+        </section>
+    </main>
+
+<!-- button to scroll top  -->
+
+    <button id="scrollTop"><img src="/images/down-arrow.png" alt=""></button>
+<!-- ---------------------------------- -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
